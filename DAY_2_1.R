@@ -97,3 +97,13 @@ rm(list=ls())
 ?load
 load(file="home.RData")
 rtime
+
+
+# save external output file
+# 1. by text
+#    write.table(RData, file="", sep="")
+write.table(home, file="home_output.txt", row.names=FALSE, quote=FALSE)
+?write.table
+
+# 2. by csv
+write.table(home, file="home_output.csv", row.names=FALSE, quote=FALSE, sep=",")
