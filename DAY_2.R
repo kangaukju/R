@@ -28,6 +28,7 @@ v4 = letters[1:3]
 
 
 # 2. matrix(vector, nrow=, ncol=, byrow=TRUE)
+matrix(1:4, nrow=1)
 matrix(1:4, nrow=2)
 matrix(1:4, nrow=2, byrow=TRUE)
 matrix(1:4, ncol=2)
@@ -39,10 +40,15 @@ matrix(c('a',1,'c'))
 
 mode(matrix(1:6))
 mode(m4)
+m1
 length(m1)
+m4
 length(m4)
 
+
 m1 = matrix(c(7,6,4,31,25,19), nrow=2, ncol=3)
+m1
+m1 = matrix(c(7,6,4,31,25,19), nrow=2, ncol=3, byrow=TRUE)
 m1
 m1[1,]
 m1[,1]
@@ -50,6 +56,9 @@ m1[2,3]
 m1[,c(1,3)]
 m1[,-2]
 m1[c(1,2), c(1,1)]
+m1[1:2, 1:2]
+m1[1:2, 2:3]
+m1[1:1, 2:3, drop=FALSE]
 
 # 3.
 # 하나의 행이나 하나의 열만 가져오면
@@ -66,6 +75,8 @@ m1[1, ]
 # array(data, dim=2)          
 # array(data, dim=c(2,3,2))   3 차원
 # array(data, dim=c(2,3,2,4)) n 차원
+?array
+array(1:12)
 array(1:12, dim=5)
 array(1:12, dim=c(2,3))
 array(1:12, dim=c(2,3,2))
