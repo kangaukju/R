@@ -80,10 +80,9 @@ for (x in 2:9) {
 # 사용자 함수
 # 함수명 = function() { T1 }
 double_func = function(x) {
-  if (is.numeric(x)) {
-#  if (mode(x) == "numeric") {
+  if (!is.numeric(x)) {
     print("꼭 숫자!!!")
-    return()
+    return(NULL)
   }
   return(2*x)
 }
@@ -92,3 +91,5 @@ double_func(letters)
 
 x=3
 mode(3) == "numeric"
+
+is.nan(1/0)
